@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAEBFA"
+        android:padding="8dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/movie_img" />
+
+        <TextView
+            android:id="@+id/fav_movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/imageView14"
+            android:text="TextView"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/fav_movie_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fav_movie_name"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/imageView14"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/fav_movie_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fav_movie_year"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/imageView14"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/unfav_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/fav_movie_name"
+            android:layout_marginLeft="175dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/imageView14"
+            app:srcCompat="@drawable/love_it" />
+    </RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
