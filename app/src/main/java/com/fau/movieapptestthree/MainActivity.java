@@ -5,6 +5,7 @@ import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     EditText movieInfo;
     Button Search;
 
+    //SETUP Fav DB
+    public static FavDatabase favDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 fetchingJSONTwo(message);
             }
         });
+
+        favDatabase = Room.databaseBuilder(getApplicationContext(),FavDatabase.class,"myfavdb").allowMainThreadQueries().build();
 
     }
 

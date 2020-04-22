@@ -9,14 +9,13 @@ import androidx.room.PrimaryKey;
 @Entity(tableName="favoritelist")
 public class FavList {
     @PrimaryKey(autoGenerate = true)
-    //@NonNull
-    private int id;
+    private Integer id;
 
-    @ColumnInfo(name = "image")
-    private String image;
+    @ColumnInfo(name = "fposter")
+    private String posterURL;
 
-    @ColumnInfo(name = "prname")
-    private String name;
+    @ColumnInfo(name = "favname")
+    private String title;
 
     public Integer getId() {
         return id;
@@ -26,20 +25,20 @@ public class FavList {
         this.id = id;
     }
 
-    public String getImage() {
-        return image;
+    public String getPosterURL() {
+        return posterURL;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setPosterURL(String posterURL) {
+        this.posterURL = posterURL;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title){
+        this.title = title;
     }
 }
 

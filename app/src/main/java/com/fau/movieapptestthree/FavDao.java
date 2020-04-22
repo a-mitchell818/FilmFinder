@@ -17,7 +17,7 @@ public interface FavDao {
     //  public List&lt;FavoriteList> getFavoriteData();
 
     @Query("SELECT EXISTS (SELECT 1 FROM favoritelist WHERE id=:id)")
-    public Integer isFavorite(Integer id);
+    public Integer isFavorite(String id);
 
     @Delete
     public void delete(FavList favoriteList);
