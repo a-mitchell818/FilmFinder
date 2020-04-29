@@ -105,11 +105,11 @@ public class MainActivity extends AppCompatActivity {
                                 //If new user successfully authenticate wih Firebase bring to settings activity
                                 //If new user successfully authenticate wih Firebase bring to Dashboard activity
                             } else {
-                                StyleableToast.makeText(MainActivity.this,"Welcome to ZACE",R.style.myToastPositive).show();
+                                StyleableToast.makeText(MainActivity.this,"Welcome to Film Finder",R.style.myToastPositive).show();
                                 //Intent inToSettings = new Intent(getApplicationContext(), Settings.class);
                                 //startActivity(inToSetting);
                                 finish();
-                                StyleableToast.makeText(MainActivity.this,"Welcome to ZACE",R.style.myToastPositive).show();
+                                StyleableToast.makeText(MainActivity.this,"Welcome to Film Finder",R.style.myToastPositive).show();
                                 Intent inToDashboard = new Intent(getApplicationContext(), Main3Activity.class);
                                 startActivity(inToDashboard);
                                 finish();
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                                 MainActivity.this.startActivity(MainActivity.this.getIntent());
                                 //If user does successfully authenticate as a existing user wih Firebase bring them to the dashboard
                             } else {
-                                StyleableToast.makeText(MainActivity.this,"Welcome to ZACE",R.style.myToastPositive).show();
+                                StyleableToast.makeText(MainActivity.this,"Welcome to Film Finder",R.style.myToastPositive).show();
                                 Intent inToDashboard = new Intent(getApplicationContext(), Main3Activity.class);
                                 startActivity(inToDashboard);
                                 finish();
