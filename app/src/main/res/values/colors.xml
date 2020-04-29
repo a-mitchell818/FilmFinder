@@ -3,4 +3,7 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="softCyan">#add8e6</color>
+    <color name="colorRed">#CD1717</color>
+    <color name="common_google_signin_btn_text_dark_default">#8C9EFF</color>
 </resources>

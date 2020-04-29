@@ -11,11 +11,21 @@ public class FavList {
     @PrimaryKey(autoGenerate = true)
     private Integer id;
 
+    public FavList(Integer id, String posterURL, String title) {
+        this.id = id;
+        this.posterURL = posterURL;
+        this.title = title;
+    }
+
     @ColumnInfo(name = "fposter")
     private String posterURL;
 
     @ColumnInfo(name = "favname")
     private String title;
+
+    public FavList() {
+
+    }
 
     public Integer getId() {
         return id;

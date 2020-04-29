@@ -112,7 +112,8 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder>{
         favoriteList.setPosterURL(image);
         favoriteList.setTitle(name);
 
-        MainActivity.favDatabase.favoriteDao().addData(favoriteList);
+        Main3Activity.favDatabase.favoriteDao().addData(favoriteList);
+        //MainActivity.favDatabase.favoriteDao().addData(favoriteList);
     }
 
 
