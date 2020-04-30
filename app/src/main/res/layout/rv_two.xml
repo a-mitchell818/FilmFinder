@@ -31,9 +31,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_toRightOf="@+id/imageView14"
+            android:fontFamily="@font/capriola"
             android:text="TextView"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/fav_movie_year"
@@ -42,8 +44,7 @@
             android:layout_below="@+id/fav_movie_name"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/imageView14"
-            android:text="TextView" />
+            android:layout_toRightOf="@+id/imageView14" />
 
         <TextView
             android:id="@+id/fav_movie_id"
@@ -52,8 +53,7 @@
             android:layout_below="@+id/fav_movie_year"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/imageView14"
-            android:text="TextView" />
+            android:layout_toRightOf="@+id/imageView14" />
 
         <ImageView
             android:id="@+id/unfav_btn"

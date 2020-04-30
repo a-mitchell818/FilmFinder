@@ -1,6 +1,7 @@
 package com.fau.movieapptestthree;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +19,13 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder>{
     private LayoutInflater inflater;
     private ArrayList<MovieModel> dataModelArrayList;
 
+
+
     public RvAdapter(Context ctx, ArrayList<MovieModel> dataModelArrayList){
 
         inflater = LayoutInflater.from(ctx);
         this.dataModelArrayList = dataModelArrayList;
+
     }
 
     @Override
@@ -29,6 +33,9 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder>{
 
         View view = inflater.inflate(R.layout.rv_one, parent, false);
         MyViewHolder holder = new MyViewHolder(view);
+
+
+        //notifyDataSetChanged();
 
         return holder;
     }
@@ -59,6 +66,9 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder>{
             }
         });
 
+        //New Added for Recycler
+        //notifyDataSetChanged();
+
     }
 
 
@@ -77,11 +87,13 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder>{
         public MyViewHolder(View itemView) {
             super(itemView);
 
+
             year = (TextView) itemView.findViewById(R.id.movie_year);
             title = (TextView) itemView.findViewById(R.id.movie_name);
             movieID = (TextView) itemView.findViewById(R.id.movie_id);
             iv = (ImageView) itemView.findViewById(R.id.imageView4);
             fav_btn = (ImageView) itemView.findViewById(R.id.fav_btn);
+
 
          /*   fav_btn.setOnClickListener(new View.OnClickListener() {
                 @Override

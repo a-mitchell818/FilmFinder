@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,12 +23,14 @@ public class FavoritesActivity extends AppCompatActivity {
     FavAdapter adapter;
     List<FavList> favArrayList;
     FavViewModel favViewModel;
-    ImageView FavMovies, home, logout;
+    ImageView FavMovies, home, logout, viewDetail;
+    //SETUP Fire DB
+    private FirebaseAuth mFireBaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorites);
-
+        mFireBaseAuth = FirebaseAuth.getInstance();
         FavMovies = (ImageView) findViewById(R.id.imageView11);
         FavMovies.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,21 +41,32 @@ public class FavoritesActivity extends AppCompatActivity {
             }
         });
 
-        logout = (ImageView) findViewById(R.id.imageView10);
+        logout = (ImageView) findViewById(R.id.imageView9);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mFireBaseAuth.getInstance().signOut();
                 Intent inToLogin = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(inToLogin);
                 finish();
             }
         });
-        home = (ImageView) findViewById(R.id.imageView9);
+        home = (ImageView) findViewById(R.id.imageView10);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent inToLogin = new Intent(getApplicationContext(), Main3Activity.class);
-                startActivity(inToLogin);
+                Intent inToMain = new Intent(getApplicationContext(), Main3Activity.class);
+                startActivity(inToMain);
+                finish();
+            }
+        });
+
+        viewDetail = (ImageView) findViewById(R.id.detail2);
+        viewDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inToView = new Intent(getApplicationContext(), ViewMovie.class);
+                startActivity(inToView);
                 finish();
             }
         });
